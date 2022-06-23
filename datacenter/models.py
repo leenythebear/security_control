@@ -36,3 +36,10 @@ def get_duration(entered_at, leaved_at=localtime()):
     then = localtime(entered_at)
     delta = (now - then).seconds
     return delta
+
+
+def is_visit_long(visit, minutes=3600):
+    if visit.leaved_at:
+        duration = get_duration(visit.entered_at, visit.leaved_at)
+        if duration > minutes:
+            return False
