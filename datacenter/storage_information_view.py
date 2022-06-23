@@ -1,6 +1,6 @@
-from datacenter.models import Visit
 from django.shortcuts import render
-from datacenter.models import get_duration, is_visit_long
+
+from datacenter.models import Visit, get_duration, is_visit_long
 
 
 def format_duration(delta):
