@@ -10,7 +10,7 @@ def passcard_info_view(request, passcode):
 
     serialized_visits = []
     for visit in visits:
-        if visit.entered_at:
+        if visit.leaved_at:
             duration = get_duration(visit.entered_at, visit.leaved_at)
             serialized_visits.append(
                 {
