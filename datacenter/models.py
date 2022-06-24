@@ -31,8 +31,11 @@ class Visit(models.Model):
         )
 
 
-def get_duration(entered_at, leaved_at=localtime()):
-    now = localtime(leaved_at)
+def get_duration(entered_at, leaved_at=None):
+    if not leaved_at:
+        now = localtime()
+    else:
+        now = localtime(leaved_at)
     then = localtime(entered_at)
     delta = (now - then).seconds
     return delta
