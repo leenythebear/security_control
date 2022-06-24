@@ -39,7 +39,5 @@ def get_duration(entered_at, leaved_at=localtime()):
 
 
 def is_visit_long(duration, seconds=3600):
-    if duration > seconds:
-        return True
-    return False
+    return duration > seconds
 
