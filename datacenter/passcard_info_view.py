@@ -8,11 +8,11 @@ def passcard_info_view(request, passcode):
     passcard = Passcard.objects.get(passcode=passcode)
     visits = Visit.objects.filter(passcard__passcode=passcard.passcode)
 
-    this_passcard_visits = []
+    serialized_visits = []
     for visit in visits:
         if visit.entered_at:
             duration = get_duration(visit.entered_at, visit.leaved_at)
-            this_passcard_visits.append(
+            serialized_visits.append(
                 {
                     "entered_at": visit.entered_at,
                     "duration": format_duration(duration),
