@@ -1,11 +1,7 @@
 from django.shortcuts import render
 
-from datacenter.models import Visit, get_duration, is_visit_long
-
-
-def format_duration(delta):
-    duration = f"{delta // 3600} ч : {delta % 3600 // 60} мин : {delta % 3600 % 60} сек"
-    return duration
+from datacenter.models import Visit, get_duration, is_visit_long, \
+    format_duration
 
 
 def storage_information_view(request):

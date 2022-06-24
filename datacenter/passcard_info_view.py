@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from datacenter.models import Passcard, Visit, get_duration, is_visit_long
-from datacenter.storage_information_view import format_duration
+from datacenter.models import Passcard, Visit, get_duration, is_visit_long, \
+    format_duration
 
 
 def passcard_info_view(request, passcode):

@@ -41,3 +41,7 @@ def get_duration(entered_at, leaved_at=localtime()):
 def is_visit_long(duration, seconds=3600):
     return duration > seconds
 
+
+def format_duration(delta):
+    duration = f"{delta // 3600} ч : {delta % 3600 // 60} мин : {delta % 3600 % 60} сек"
+    return duration
