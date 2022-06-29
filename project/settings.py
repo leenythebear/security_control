@@ -10,11 +10,11 @@ SECRET_KEY = env.str('SECRET_KEY')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': env.str('ENGINE'),
         'HOST': env.str('HOST'),
-        'PORT': '5434',
-        'NAME': 'checkpoint',
-        'USER': 'guard',
+        'PORT': env.int('PORT'),
+        'NAME': env.str('NAME'),
+        'USER': env.str('USER'),
         'PASSWORD': env.str('PASSWORD'),
     }
 }
