@@ -10,12 +10,12 @@ SECRET_KEY = env.str('SECRET_KEY')
 
 DATABASES = {
     'default': {
-        'ENGINE': env.str('ENGINE'),
-        'HOST': env.str('HOST'),
-        'PORT': env.int('PORT'),
-        'NAME': env.str('NAME'),
-        'USER': env.str('USER'),
-        'PASSWORD': env.str('PASSWORD'),
+        'ENGINE': env.str('DATABASE_ENGINE'),
+        'HOST': env.str('DATABASE_HOST'),
+        'PORT': env.int('DATABASE_PORT'),
+        'NAME': env.str('DATABASE_NAME'),
+        'USER': env.str('DATABASE_USER'),
+        'PASSWORD': env.str('DATABASE_PASSWORD'),
     }
 }
 
