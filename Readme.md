@@ -15,7 +15,7 @@
 ## Переменные окружения
 
 Для работы сайта необходимо создать файл `.env` и указать в нем следующие переменные окружения:
-1. __ENGINE__ - использовуемый движок для доступа к базе данных и работы с ней
+1. __ENGINE__ - используемый движок для доступа к базе данных и работы с ней
 2. __HOST__ - адрес базы данных
 3. __PORT__ - порт для подключения к базе данных
 4. __NAME__ - имя базы данных
@@ -23,25 +23,28 @@
 6. __USER__ - имя пользователя для входа в базу данных
 7. __SECRET_KEY__ - Django secret key
 8. __DEBUG__ - необходим для включения и отключения режима отладки. 
+9. __ALLOWED_HOSTS__ - список хостов/доменов, использует этот сайт
 
 Пример указания значений переменных окружения:
 
 ```
-ENGINE = django.db.backends.mysql
+ENGINE=django.db.backends.mysql
 
-HOST = database.host.org
+HOST=database.host.org
 
-PORT = 7076
+PORT=7076
 
-NAME = basename
+NAME=basename
 
-PASSWORD = kjdi17
+PASSWORD=kjdi17
 
-USER = username
+USER=username
 
-SECRET_KEY = YOUR_SECRET_KEY
+SECRET_KEY=YOUR_SECRET_KEY
 
-DEBUG = True
+DEBUG=True
+
+ALLOWED_HOSTS=localhost,127.0.0.1
 ``` 
 
 
